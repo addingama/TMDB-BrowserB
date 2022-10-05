@@ -75,7 +75,6 @@ Partial Class SplashScreen
         '
         'Timer1
         '
-        Me.Timer1.Enabled = True
         '
         'SplashScreen
         '

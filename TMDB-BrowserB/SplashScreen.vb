@@ -6,7 +6,8 @@
     End Sub
 
     Private Sub SplashScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Timer1.Interval = 10
+        Timer1.Start()
     End Sub
 
     ' Fungsi yang akan dijalankan setiap interval timer
@@ -19,6 +20,9 @@
         'Jika progress sama dengan 100 maka hentikan timer
         If (progress = 100) Then
             Timer1.Stop()
+            Me.Hide()
+            MovieListLocal.Show()
+
         End If
 
         ' set progress bar value menggunakan nilai newProgress
