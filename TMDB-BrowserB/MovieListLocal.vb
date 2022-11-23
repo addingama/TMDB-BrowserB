@@ -5,7 +5,7 @@ Imports Newtonsoft.Json
 Public Class MovieListLocal
     Dim filmList As FilmList = New FilmList()
     Dim movies As List(Of Film)
-    Dim selectedMovie As Film
+    Public selectedMovie As Film
     Private Sub MovieListLocal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Hasil data film akan di simpan ke variable movies
         movies = filmList.AmbilDaftarFilmPadaLocalDatabase()
@@ -63,6 +63,11 @@ Public Class MovieListLocal
     Private Sub dgv_movie_list_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_movie_list.CellDoubleClick
         ' Menyimpan objek Film sesuai dengan index yang terpilih
         selectedMovie = movies(e.RowIndex)
-        MessageBox.Show("Judul:" & selectedMovie.title)
+        'Tutup detail form
+        MovieDetail.Close()
+        'buka lagi
+        MovieDetail.Show()
     End Sub
+
+
 End Class

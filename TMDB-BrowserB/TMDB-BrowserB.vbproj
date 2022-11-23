@@ -124,6 +124,12 @@
     <Compile Include="Models\FilmList.vb" />
     <Compile Include="Models\GetNowPlayingMoviesResponse.vb" />
     <Compile Include="Models\Review.vb" />
+    <Compile Include="MovieDetail.Designer.vb">
+      <DependentUpon>MovieDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MovieDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MovieListLocal.Designer.vb">
       <DependentUpon>MovieListLocal.vb</DependentUpon>
     </Compile>
@@ -155,6 +161,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MovieDetail.resx">
+      <DependentUpon>MovieDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MovieListLocal.resx">
       <DependentUpon>MovieListLocal.vb</DependentUpon>
     </EmbeddedResource>

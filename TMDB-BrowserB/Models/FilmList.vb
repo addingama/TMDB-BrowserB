@@ -1,4 +1,5 @@
-﻿Imports System.Net.Http
+﻿Imports System.Diagnostics.Eventing
+Imports System.Net.Http
 Imports MySql.Data.MySqlClient
 Imports Newtonsoft.Json
 
@@ -32,7 +33,10 @@ Public Class FilmList
             ' Kolom pertama sama dengan index ke 0
             data.id = result.GetValue(0)
             data.title = result.GetValue(1)
-            data.poster_path = result.GetValue(2)
+            Dim posterPath = result.GetValue(2)
+            If (posterPath IsNot "") Then
+                data.poster_path = "https://image.tmdb.org/t/p/original" & posterPath
+            End If
             data.release_date = result.GetValue(3)
             data.vote_average = result.GetValue(4)
             data.overview = result.GetValue(5)
