@@ -121,6 +121,7 @@
     <Compile Include="Models\Artist.vb" />
     <Compile Include="Models\Film.vb" />
     <Compile Include="Models\FilmArtist.vb" />
+    <Compile Include="Models\FilmList.vb" />
     <Compile Include="Models\GetNowPlayingMoviesResponse.vb" />
     <Compile Include="Models\Review.vb" />
     <Compile Include="MovieListLocal.Designer.vb">
